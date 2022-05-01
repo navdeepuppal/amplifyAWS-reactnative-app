@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "amplifiedtodoa766ddca_identitypool_a766ddca",
+    "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "amplifa766ddca",
-    "userPoolName": "amplifiedtodoa766ddca_userpool_a766ddca",
+    "resourceNameTruncated": "amplif3dfc307d",
+    "userPoolName": "amplifiedtodo",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -14,34 +14,32 @@
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Your verification code",
-    "emailVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Verification code: {####}",
+    "emailVerificationMessage": "Verification code: {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
-      "email"
+      "email",
+      "name"
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
-    "userpoolClientWriteAttributes": [
-      "email"
-    ],
-    "userpoolClientReadAttributes": [
-      "email"
-    ],
-    "userpoolClientLambdaRole": "amplifa766ddca_userpoolclient_lambda_role",
+    "userpoolClientWriteAttributes": [],
+    "userpoolClientReadAttributes": [],
+    "userpoolClientLambdaRole": "amplif3dfc307d_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "a766ddca",
-    "resourceName": "amplifiedtodoa766ddca",
+    "sharedId": "3dfc307d",
+    "resourceName": "amplifiedtodo",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "default",
-    "usernameAttributes": [
-      "email"
-    ],
-    "userPoolGroupList": [],
     "serviceName": "Cognito",
+    "useDefault": "manual",
+    "userPoolGroups": false,
+    "userPoolGroupList": [],
+    "adminQueries": false,
+    "thirdPartyAuth": false,
+    "authProviders": [],
     "usernameCaseSensitive": false,
     "useEnabledMfas": true
   }

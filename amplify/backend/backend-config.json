@@ -30,18 +30,17 @@
     }
   },
   "auth": {
-    "amplifiedtodoa766ddca": {
+    "amplifiedtodo": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
         "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
+        "usernameAttributes": [],
         "signupAttributes": [
-          "EMAIL"
+          "EMAIL",
+          "NAME"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,

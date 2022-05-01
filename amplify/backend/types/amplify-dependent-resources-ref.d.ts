@@ -7,7 +7,7 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "auth": {
-        "amplifiedtodoa766ddca": {
+        "amplifiedtodo": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
             "UserPoolId": "string",

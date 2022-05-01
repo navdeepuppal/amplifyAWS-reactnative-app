@@ -1,17 +1,20 @@
 import React from 'react';
 import { StatusBar, StyleSheet, View } from 'react-native';
-import { Amplify } from 'aws-amplify';
-import awsconfig from './src/aws-exports';
 import Home from './src/Home';
+import Amplify, {Auth} from 'aws-amplify';
+import { withAuthenticator } from 'aws-amplify-react-native'
+import config from './src/aws-exports'
 
-Amplify.configure(awsconfig);
+Amplify.configure(config);
 
-export default function App() {
+
+const App = () => {
+  Auth.signOut();
   return (
     <View style={styles.container}>
       <StatusBar />
       <Home />
-    </View>
+    </View> 
   );
 }
 
@@ -21,3 +24,5 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+
+export default withAuthenticator(App);
