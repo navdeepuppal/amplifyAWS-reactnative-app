@@ -1,28 +1,34 @@
-import React from 'react';
-import { StatusBar, StyleSheet, View } from 'react-native';
-import Home from './src/Home';
-import Amplify, {Auth} from 'aws-amplify';
-import { withAuthenticator } from 'aws-amplify-react-native'
-import config from './src/aws-exports'
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
 
-Amplify.configure(config);
-
-
-const App = () => {
-  Auth.signOut();
-  return (
-    <View style={styles.container}>
-      <StatusBar />
-      <Home />
-    </View> 
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-    flex: 1,
-  },
-});
-
-export default withAuthenticator(App);
+ import React from 'react';
+ import {SafeAreaView, StyleSheet, Text} from 'react-native';
+ import Navigation from './src/navigation';
+ import Amplify from 'aws-amplify';
+ import config from './src/aws-exports';
+ 
+ Amplify.configure(config);
+ 
+ const App = () => {
+   // Auth.signOut();
+   return (
+     <SafeAreaView style={styles.root}>
+       <Navigation />
+     </SafeAreaView>
+   );
+ };
+ 
+ const styles = StyleSheet.create({
+   root: {
+     flex: 1,
+     backgroundColor: '#F9FBFC',
+   },
+ });
+ 
+ export default App;
+ 
